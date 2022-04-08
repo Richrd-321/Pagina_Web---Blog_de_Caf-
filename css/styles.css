@@ -3,7 +3,7 @@
     --fuenteParrafos: "Open Sans", sans-serif;
 
     --primario: #784D3C;
-    --claro:var(--claro)
+    --gris: #e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
 }
@@ -24,8 +24,9 @@ body {
 
 /*--    GLOBALES    --*/
 .contenedor {
-    max-width: 120rem;
-    width: 90%;
+    /*max-width: 120rem;*/
+    /*width: 90%;*/
+    width: min(90%, 120rem);
     margin: 0 auto;
 }
 
@@ -35,6 +36,7 @@ a{
 
 h1,h2,h3,h4 {
     font-family: var(--fuenteHeading);
+    line-height: 1.2;
 }
 
 h1 {
@@ -59,6 +61,7 @@ img {
 /*--    UTILIDADES  --*/
 .no-margin {
     margin: 0;
+    
 }
 
 .no-padding {
@@ -67,6 +70,7 @@ img {
 
 .centrar-texto {
     text-align: center;
+    
 }
 
 /*--    HEADER  --*/
@@ -88,6 +92,10 @@ img {
     .header__texto {
         margin-top: 15rem;
     }
+}
+
+.barra {
+    padding-top: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -134,5 +142,86 @@ img {
 
 /*--    CONTENIDO   --*/
 .entrada {
-    border: ;
+    border-bottom: 1px solid var(--gris);
+    
+}
+.entrada:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.boton {
+    display: block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
+.boton--primario {
+    background-color: var(--negro);
+}
+
+.boton--secundario {
+    background-color: var(--primario);
+}
+
+.cursos {
+    list-style: none;
+}
+
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-curso__info {
+    font-weight: normal;
+}
+
+.widget-curso__label,
+.widget-curso__info {
+    font-size: 2rem;
+}
+
+/*--    FOOTER      --*/
+.footer {
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+/*--                PAGINA - SOBRE NOSOTROS             --*/
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sobre-nosotros__imagen,
+    .sobre-nosotros__texto {
+        flex-basis: calc(50% - 1rem);
+    }
+}
+.sobre-nosotros {
+
 }
